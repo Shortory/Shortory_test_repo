@@ -1,0 +1,60 @@
+<!-- timestamp.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타임스탬프 분석 결과</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #A0E7E5, #CAF7F2, #9DECF9);
+      font-family: 'Noto Sans KR', sans-serif;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      color: #1B3444;
+      margin-bottom: 30px;
+    }
+    .clips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .clip-card {
+      background: rgba(255,255,255,0.9);
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    video {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <h1>🕒 타임스탬프 기반 클립</h1>
+  <div class="clips">
+    {% for clip in timestamp_clips %}
+    <div class="clip-card">
+      <video controls>
+        <source src="{{ url_for('static', filename='timestamp_output/' + clip) }}" type="video/mp4">
+      </video>
+      <p>{{ clip }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <footer>
+    © 찰나의 Shortory
+  </footer>
+</body>
+</html>

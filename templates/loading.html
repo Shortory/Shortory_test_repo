@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>분석 중...</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #A0E7E5, #CAF7F2, #9DECF9);
+      font-family: 'Noto Sans KR', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .glow-circle {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #a0f1dc, #87e3f0, transparent);
+      filter: blur(80px);
+      border-radius: 50%;
+      opacity: 0.5;
+    }
+    h2 {
+      color: #1B3444;
+      font-size: 2rem;
+    }
+    p {
+      color: #333;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-circle"></div>
+  <h2>🔄 분석 중입니다...</h2>
+  <p>영상 분석이 진행 중입니다. 잠시만 기다려주세요.</p>
+  <meta http-equiv="refresh" content="5;url=/result" />
+</body>
+</html>
